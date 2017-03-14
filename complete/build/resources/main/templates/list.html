@@ -1,0 +1,26 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head> 
+    <title>Getting Started: Serving Web Content</title> 
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    
+    <script type="text/javascript"
+    src="https://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
+</head>
+<body>
+    <p th:text="'Hello, ' + ${name} + '!'" />
+</body>
+<script type="text/javascript">
+
+   $.ajax({
+      type: "POST",
+      contentType : 'application/json; charset=utf-8',
+      dataType : 'json',
+      url: "/http://igovphil.github.io/java-exam-01/uacs-agency.json",
+      data: JSON.stringify(search), // Note it is important
+      success :function(result) {
+       // do what ever you want with data
+     }
+  });
+ </script>
+</html>
